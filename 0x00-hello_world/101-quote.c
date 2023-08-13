@@ -2,12 +2,14 @@
 #include <unistd.h>
 
 /**
- * main - C program that prints a message to the standard error.
+ * main - Prints a message to the standard error.
  *
- * Return: Always 0 (Success)
+ * Return: Always 1 (Error)
  */
 int main(void)
 {
-    fputs("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", stderr);
-    return 0;
+	write(2,
+		"and that piece of art is useful\" - Dora Korpar, 2015-10-19\n",
+		59);
+	return (1);
 }
