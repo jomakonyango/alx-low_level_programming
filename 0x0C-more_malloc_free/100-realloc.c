@@ -9,7 +9,7 @@
 * @new_size: new size allocated by _realloc funct
 * Return: pointer to new allocated memory
 */
-void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	char *p;
 	size_t i, max = new_size;
@@ -17,7 +17,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 
 	if (ptr == NULL)
 	{
-		p = malloc(new_size)
+		p = malloc(new_size);
 			return (p);
 	}
 	else if (new_size == 0)
@@ -27,7 +27,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 	}
 	else if (new_size == old_size)
 		return (ptr);
-	p = malloc(new_size)
+	p = malloc(new_size);
 		if (p == NULL)
 		return (NULL);
 	if (new_size > old_size)
