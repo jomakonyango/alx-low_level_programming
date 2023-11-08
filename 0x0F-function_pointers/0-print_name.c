@@ -1,20 +1,14 @@
 #include <stdio.h>
 
 /**
-* print_name - Function to print a name using a specified printing function
-* @name: The name to be printed
-* @f: Pointer to the printing function
+* print_name - Function to print a name using pointer to function
+* @name: string to add
+* @f: Pointer to function
+* Return: nothing
 */
 void print_name(char *name, void (*f)(char *))
 {
+	if(name == NULL || f== NULL)
+		return
 	f(name);
-}
-
-/**
-* print - Function to print a name to the standard output
-* @name: The name to be printed
-*/
-void print(char *name)
-{
-	printf("%s\n", name);
 }
