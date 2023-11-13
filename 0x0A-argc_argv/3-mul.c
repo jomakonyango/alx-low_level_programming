@@ -2,10 +2,11 @@
 #include <stdlib.h>
 
 /**
- * main - multiplies two numbers.
- * @argc: number of command line arguments.
- * @argv: array of command line arguments.
- * Return: 0 if Success, 1 if Error.
+ * main - multiplies two numbers
+ * @argc: argument count
+ * @argv: argument vector
+ *
+ * Return: 0 on success, 1 on error
  */
 int main(int argc, char *argv[])
 {
@@ -25,3 +26,4 @@ printf("%d\n", product);
 
 return (0);
 }
+
