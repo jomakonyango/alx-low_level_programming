@@ -13,8 +13,9 @@ int main(int argc, char *argv[])
 int sum = 0;
 int num;
 char *ptr;
+int i;
 
-for (int i = 1; i < argc; i++)
+for (i = 1; i < argc; i++)
 {
 num = strtol(argv[i], &ptr, 10);
 
