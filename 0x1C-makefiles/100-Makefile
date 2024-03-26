@@ -28,15 +28,15 @@ $(NAME): $(OBJ)
 
 # Phony target to clean up Emacs, Vim temporary files, and the executable
 clean:
-	$(RM) *~ $(NAME)
+	rm -f *~ $(NAME)
 
 # Phony target to delete object files
 oclean:
-	$(RM) $(OBJ)
+	rm -f $(OBJ)
 
 # Phony target to delete all Emacs, Vim temporary files, the executable, and object files
 fclean: clean oclean
-	$(RM) $(NAME)
+	rm -f $(NAME)
 
 # Phony target to force recompilation of all source files
 re: fclean all
