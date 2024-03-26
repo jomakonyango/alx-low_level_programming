@@ -1,0 +1,18 @@
+# Makefile for the "school" executable
+
+# Variables
+CC = gcc
+SRC = main.c school.c
+
+# Default rule (all) to build the executable
+all:
+	$(CC) $(SRC) -o school
+
+# Phony target to clean up
+clean:
+	rm -f school
+
+# Phony target to generate empty text files (just for demonstration)
+generate:
+	@echo "Creating empty text files..."
+	touch file-{1..10}.txt
