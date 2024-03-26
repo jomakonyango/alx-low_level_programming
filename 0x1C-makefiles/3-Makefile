@@ -1,0 +1,46 @@
+# Makefile for the "school" executable
+
+# Compiler
+CC = gcc
+
+# Source files
+SRC = main.c school.c
+
+# Object files (automatically generated)
+OBJ = $(SRC:.c=.o)
+
+# Executable name
+NAME = school
+
+# Program to delete files
+RM = rm -f
+
+# Default rule (all) to build the executable
+all: $(NAME)
+
+# Rule to build the executable
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+# Rule to compile source files
+%.o: %.c
+	$(CC) -c $< -o $@
+
+# Phony target to clean up Emacs, Vim temporary files, and the executable
+clean:
+	$(RM) *~ $(NAME)
+
+# Phony target to delete object files
+oclean:
+	$(RM) $(OBJ)
+
+# Phony target to delete all Emacs, Vim temporary files, the executable, and object files
+fclean: clean oclean
+
+# Phony target to force recompilation of all source files
+re: fclean all
+
+# Phony target to generate empty text files (just for demonstration)
+generate:
+	@echo "Creating empty text files..."
+	touch file-{1..10}.txt
