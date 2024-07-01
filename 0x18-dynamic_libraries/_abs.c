@@ -1,11 +1,14 @@
 #include <stdio.h>
 /**
- * _isalpha - Checks if a character is an alphabetic character
- * @c: The character to be checked
+ * _abs - Computes the absolute value of an integer
+ * @n: The input integer
  *
- * Return: 1 if `c` is an alphabetic character, 0 otherwise
+ * Return: The absolute value of n
  */
-int _isalpha(int c)
+int _abs(int n)
 {
-return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
+if (n < 0)
+return (-n);
+else
+return (n);
 }
